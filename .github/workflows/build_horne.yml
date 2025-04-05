@@ -9,9 +9,10 @@ jobs:
     secrets: inherit
     with:
       board: '["seeeduino_xiao_ble"]'
-      shield: '["horne_left","horne_right"]'
+      shield: '["horne_left rgbled_adapter","horne_right rgbled_adapter"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=n"]'
       alphas: '["qwerty"]'
       nav: '["vi"]'
       clipboard: '["mac"]'
       layers: '["default"]'
+      module: '["caksoylar/zmk-rgbled-widget/main"]'
