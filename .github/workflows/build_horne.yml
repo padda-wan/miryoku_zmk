@@ -2,7 +2,10 @@
 # https://github.com/manna-harbour/miryoku
 
 name: 'Build handwired horne'
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - master
 jobs:
   build:
     uses: ./.github/workflows/main.yml
@@ -15,4 +18,4 @@ jobs:
       nav: '["vi"]'
       clipboard: '["mac"]'
       layers: '["default"]'
-      module: '["caksoylar/zmk-rgbled-widget/main"]'
+      modules: '["caksoylar/zmk-rgbled-widget/main"]'
