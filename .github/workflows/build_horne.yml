@@ -1,4 +1,4 @@
-# Copyright 2022 Manna Harbour
+# opyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
 name: 'Build handwired horne'
@@ -16,6 +16,6 @@ jobs:
       kconfig: '["CONFIG_ZMK_DISPLAY=n"]'
       alphas: '["qwerty"]'
       nav: '["vi"]'
-      clipboard: '["mac"]'
+      clipboard: '["win"]'
       layers: '["default"]'
       modules: '["caksoylar/zmk-rgbled-widget/main"]'
