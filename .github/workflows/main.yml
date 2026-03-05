@@ -44,11 +44,14 @@ on:
       modules:
         type: string
         default: '["default"]'
+      runs_on:
+        type: string
+        default: 'ubuntu-latest'
   
 
 jobs:
   main:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.runs_on }}
     container:
       image: zmkfirmware/zmk-build-arm:stable
     strategy:
@@ -372,4 +375,3 @@ jobs:
         with:
           name: ${{ steps.main.outputs.run_name }}
           path: ${{ steps.main.outputs.artifact_dir }}
-

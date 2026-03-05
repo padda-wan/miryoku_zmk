@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["seeeduino_xiao_ble"]'
+      board: '["seeeduino_xiao_ble_sense"]'
       shield: '["horne_left rgbled_adapter","horne_right rgbled_adapter"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=n\nCONFIG_ZMK_POINTING=y"]'
       alphas: '["qwerty"]'
@@ -21,3 +21,4 @@ jobs:
       layers: '["default"]'
       modules: '["caksoylar/zmk-rgbled-widget/main"]'
       branches: '["zmkfirmware/zmk/main"]'
+      runs_on: 'self-hosted'
