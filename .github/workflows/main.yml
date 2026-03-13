@@ -158,7 +158,7 @@ jobs:
             modules="${{ matrix.modules }}"
           fi
 
-          run_name=`echo $run_name | tr ' ' '-'`
+          run_name=`echo "$run_name" | tr ' ' '-' | sed 's/[\"*:<>?|\/\\]/-/g; s/--*/-/g; s/^-//; s/-$//'`
           echo "run_name=$run_name" >> $GITHUB_OUTPUT
 
           echo "::endgroup::"
