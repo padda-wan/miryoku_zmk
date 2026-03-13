@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["xiao_ble"]'
+      board: '["xiao_ble//zmk"]'
       shield: '["horne_left","horne_right"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=n\nCONFIG_ZMK_POINTING=y"]'
       alphas: '["qwerty"]'
